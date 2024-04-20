@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block contenido %}  
+  
+    {% if profesor %}
+        <ul>
+        {% for n in profesor %}
+            <li>nombre: {{n.nombre}}</li>
+            <li>materia: {{n.materia}}</li>
+
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron profesores con ese nombre</p>
+    {% endif %}
+
+
+{% endblock %}

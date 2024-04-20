@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block contenido %}
+   
+   <div class="container">
+        <div class="row">
+            <div class="col-12  col-md-4">
+                <div class="card">
+                    <img src="{{ url }}" class="card-img-top"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Laura Silvina</h5>
+                        <p class="card-text">Me gusto mucho el curso</p>
+                        <a class="btn btn-danger" href="">Enviar mensaje</a>
+                        <form method="post" action="{% url 'Logout' %}">
+                            {% csrf_token %}
+                            <button type="submit">logout</button>
+                            <a href="{% url 'EditarPerfil' %}" class="btn btn-warning">Editar</a>
+                        </form>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
